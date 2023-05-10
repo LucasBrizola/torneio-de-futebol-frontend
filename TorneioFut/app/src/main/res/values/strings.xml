@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">TorneioFut</string>
+    <string name="name">Name</string>
+    <string name="password">Senha</string>
+    <string name="login">Login</string>
     <string name="nome_time">Nome do Time</string>
     <string name="goleiro">Goleiro</string>
     <string name="time_1">Time 1</string>
