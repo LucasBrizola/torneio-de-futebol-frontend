@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TorneioFut</string>
+    <string name="nome_time">Nome do Time</string>
+    <string name="goleiro">Goleiro</string>
+    <string name="time_1">Time 1</string>
+    <string name="time_2">Time 2</string>
+    <string name="salvar">Salvar</string>
+    <string name="versus">X</string>
+    <string name="hora_template">00:00</string>
+    <string name="hora_jogo">Hora do jogo: </string>
+</resources>

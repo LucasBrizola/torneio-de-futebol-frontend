@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".team.view.NewTeamActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/tb_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/yellow"
+            android:elevation="1dp"
+            android:layout_marginBottom="6dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="Novo Time"
+            app:titleTextColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/nome_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="6dp"
+                android:layout_marginBottom="6dp"
+                android:gravity="center"
+                android:background="@color/white"
+                android:hint="@string/nome_time"
+                android:textColorHint="@color/grey"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/tb_navigation"
+                app:layout_constraintBottom_toTopOf="@+id/ll1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:inputType="textPersonName" />
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="6dp"
+            android:layout_marginBottom="6dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/nome_time"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/ll2">
+
+        <EditText
+            android:id="@+id/num_jogador1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="top"
+            android:padding="6dp"
+            android:background="@color/white"
+            android:hint="num 1"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/jogador1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="top"
+            android:padding="6dp"
+            android:background="@color/white"
+            android:hint="@string/goleiro"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"
+            android:inputType="textPersonName" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="6dp"
+            android:layout_marginBottom="6dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/ll1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/ll3">
+
+        <EditText
+            android:id="@+id/num_jogador2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="top"
+            android:padding="6dp"
+            android:background="@color/white"
+            android:hint="num 2"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/jogador2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="top"
+            android:padding="6dp"
+            android:background="@color/white"
+            android:hint="Jogador 2"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"
+            android:inputType="textPersonName" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="6dp"
+            android:layout_marginBottom="6dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/ll2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/ll4">
+        <EditText
+            android:id="@+id/num_jogador3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="top"
+            android:padding="6dp"
+            android:background="@color/white"
+            android:hint="num 3"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/jogador3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="top"
+            android:padding="6dp"
+            android:background="@color/white"
+            android:hint="Jogador 3"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"
+            android:inputType="textPersonName" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="6dp"
+            android:layout_marginBottom="6dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/ll3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/ll4">
+
+        <EditText
+            android:id="@+id/num_jogador4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="top"
+            android:padding="6dp"
+            android:background="@color/white"
+            android:hint="num 4"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/jogador4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="top"
+            android:padding="6dp"
+            android:background="@color/white"
+            android:hint="Jogador 4"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"
+            android:inputType="textPersonName" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="6dp"
+            android:layout_marginBottom="6dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/ll4"
+            app:layout_constraintBottom_toTopOf="@id/ll6"
+            app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/num_jogador5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="top"
+            android:padding="6dp"
+            android:background="@color/white"
+            android:hint="num 5"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/jogador5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="top"
+            android:padding="6dp"
+            android:background="@color/white"
+            android:hint="Jogador 5"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"
+            android:inputType="textPersonName" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll6"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="6dp"
+            android:layout_marginBottom="6dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/ll5"
+            app:layout_constraintBottom_toTopOf="@id/ll7"
+            app:layout_constraintStart_toStartOf="parent">
+        <EditText
+            android:id="@+id/num_jogador6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="top"
+            android:padding="6dp"
+            android:background="@color/white"
+            android:hint="num 6"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/jogador6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="top"
+            android:padding="6dp"
+            android:background="@color/white"
+            android:hint="Jogador 6"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"
+            android:inputType="textPersonName" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll7"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="6dp"
+            android:layout_marginBottom="6dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/ll6"
+            app:layout_constraintBottom_toTopOf="@id/ll8"
+            app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/num_jogador7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="top"
+            android:padding="6dp"
+            android:background="@color/white"
+            android:hint="num 7"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/jogador7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="top"
+            android:padding="6dp"
+            android:background="@color/white"
+            android:hint="Jogador 7"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"
+            android:inputType="textPersonName" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll8"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="6dp"
+            android:layout_marginBottom="6dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/ll7"
+            app:layout_constraintBottom_toTopOf="@id/btn_salvar"
+            app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/num_jogador8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="top"
+            android:padding="6dp"
+            android:background="@color/white"
+            android:hint="num 8"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/jogador8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="top"
+            android:padding="6dp"
+            android:background="@color/white"
+            android:hint="Jogador 8"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"
+            android:inputType="textPersonName" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_salvar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/blue"
+            android:layout_marginBottom="28dp"
+            android:text="@string/salvar"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
