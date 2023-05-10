@@ -18,18 +18,12 @@
             app:title="Home"
             app:titleTextColor="@color/white" />
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tl_home"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/tb_navigation" />
-
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/vp_home"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tl_home" />
+            app:layout_constraintTop_toBottomOf="@+id/tb_navigation" />
 
         <ProgressBar
             android:id="@+id/pb_loading"
