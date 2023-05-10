@@ -1,6 +1,6 @@
 package com.brizola.torneiofut.login.domain
 
-import com.brizola.torneiofut.login.data.local.Match
+import com.brizola.torneiofut.login.data.local.User
 import com.brizola.torneiofut.login.data.remote.RemoteLoginDatasource
 
 class UserUsecase {
@@ -9,6 +9,6 @@ class UserUsecase {
     }
 
     suspend fun login(name: String, password: String) : Boolean{
-        return remoteLoginDataSource.login(user = Match(name, password))
+        return remoteLoginDataSource.login(user = User(name, password))
     }
 }

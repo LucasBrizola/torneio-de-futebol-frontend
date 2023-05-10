@@ -5,25 +5,26 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="100dp"
         android:layout_margin="8dp"
         app:cardCornerRadius="8dp"
         app:cardElevation="4dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp">
+            android:layout_height="100dp">
             <LinearLayout
                 android:id="@+id/ll_times"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="10dp"
                 android:layout_marginTop="22dp"
                 android:gravity="center"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent">
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/tv_goals">
 
             <TextView
                 android:id="@+id/tv_team1"
@@ -53,10 +54,37 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal|center_vertical"
+                android:layout_marginEnd="32dp"
                 app:layout_constraintStart_toEndOf="@id/tv_versus"
                 app:layout_constraintEnd_toEndOf="parent"
                 tools:text="time2"/>
+
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/yellow"
+                android:textSize="16sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ll_times"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="16:15"/>
+
+            <TextView
+                android:id="@+id/tv_goals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/yellow"
+                android:textSize="24sp"
+                android:gravity="center_horizontal|center_vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_times"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:text="1x0"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

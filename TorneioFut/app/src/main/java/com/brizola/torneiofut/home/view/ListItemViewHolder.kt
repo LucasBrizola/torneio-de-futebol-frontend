@@ -1,4 +1,4 @@
-package com.brizola.torneiofut.home.presentation
+package com.brizola.torneiofut.home.view
 
 import androidx.recyclerview.widget.RecyclerView
 import com.brizola.torneiofut.databinding.ListItemBinding
@@ -10,5 +10,7 @@ class ListItemViewHolder (
         fun bind(match: Match) {
             binding.tvTeam1.text = match.team1
             binding.tvTeam2.text = match.team2
+            binding.tvHour.text = match.hour
+            binding.tvGoals.text = match.goals
         }
 }
