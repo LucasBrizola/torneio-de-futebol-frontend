@@ -1,4 +1,4 @@
-package com.brizola.torneiofut.team.data
+package com.brizola.torneiofut.team.domain.data
 
 import com.brizola.torneiofut.player.Player
 import com.squareup.moshi.JsonClass

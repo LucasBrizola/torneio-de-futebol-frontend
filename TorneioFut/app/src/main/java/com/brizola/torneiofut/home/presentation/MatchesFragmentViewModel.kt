@@ -5,8 +5,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.brizola.torneiofut.match.domain.data.local.Match
 import com.brizola.torneiofut.match.usecase.MatchUsecase
-import com.brizola.torneiofut.login.data.local.Match
 import kotlinx.coroutines.launch
 
 class MatchesFragmentViewModel : ViewModel(){

@@ -8,7 +8,7 @@ import androidx.activity.viewModels
 import com.brizola.torneiofut.databinding.ActivityLoginBinding
 import com.brizola.torneiofut.login.presentation.LoginViewModel
 import com.brizola.torneiofut.login.presentation.ViewState
-import com.brizola.torneiofut.team.view.NewTeamActivity
+import com.brizola.torneiofut.match.view.NewMatchActivity
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
@@ -23,7 +23,8 @@ class LoginActivity : AppCompatActivity() {
         viewModel.viewState.observe(this) { state ->
             when (state) {
                 is ViewState.ShowSuccess -> ShowSucess()
-                is ViewState.ShowError -> showError()
+                is ViewState.ShowErrorLogin -> showErrorLogin()
+                is ViewState.ShowFieldsNull -> showFieldsNull()
             }
         }
         configLoginButton()
@@ -39,10 +40,14 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun ShowSucess() {
-        startActivity(Intent(this@LoginActivity, NewTeamActivity::class.java))
+        startActivity(Intent(this@LoginActivity, NewMatchActivity::class.java))
     }
 
-    private fun showError() {
-        Toast.makeText(this, "login incompleto", Toast.LENGTH_LONG).show()
+    private fun showErrorLogin() {
+        Toast.makeText(this, "login ou senha incorretos", Toast.LENGTH_LONG).show()
     }
+    private fun showFieldsNull() {
+        Toast.makeText(this, "campos não podem ser vazios", Toast.LENGTH_LONG).show()
+    }
+
 }

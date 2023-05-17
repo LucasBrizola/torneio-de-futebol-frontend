@@ -15,18 +15,23 @@ class LoginViewModel : ViewModel() {
         UserUsecase()
     }
 
-    fun loginUser(name: String, password: String) {
+    fun loginUser(name: String?, password: String?) {
         viewModelScope.launch {
-            val loginSuccess = usecase.login(name, password)
-            if (loginSuccess == true) {
-                state.value = ViewState.ShowSuccess
-            } else
-                state.value = ViewState.ShowError
+            if (!name.isNullOrEmpty() && !password.isNullOrEmpty()) {
+                val loginSuccess = usecase.login(name, password)
+                if (loginSuccess == true) {
+                    state.value = ViewState.ShowSuccess
+                } else
+                    state.value = ViewState.ShowErrorLogin
+            } else{
+                state.value = ViewState.ShowFieldsNull
+            }
         }
     }
 }
 
 sealed class ViewState {
     object ShowSuccess : ViewState()
-    object ShowError : ViewState()
+    object ShowErrorLogin : ViewState()
+    object ShowFieldsNull : ViewState()
 }

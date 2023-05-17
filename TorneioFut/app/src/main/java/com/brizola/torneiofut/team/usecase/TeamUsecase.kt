@@ -1,8 +1,7 @@
 package com.brizola.torneiofut.team.usecase
 
-import android.util.Log
 import com.brizola.torneiofut.player.Player
-import com.brizola.torneiofut.team.data.Team
+import com.brizola.torneiofut.team.domain.data.Team
 import com.brizola.torneiofut.team.remote.RemoteTeamDataSource
 
 class TeamUsecase {

@@ -10,7 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.brizola.torneiofut.databinding.FragmentMatchesBinding
 import com.brizola.torneiofut.home.presentation.MatchesFragmentViewModel
 import com.brizola.torneiofut.home.presentation.ViewState
-import com.brizola.torneiofut.login.data.local.Match
+import com.brizola.torneiofut.match.domain.data.local.Match
 
 
 class MatchesFragment : Fragment() {

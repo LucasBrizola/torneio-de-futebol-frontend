@@ -1,7 +1,7 @@
 package com.brizola.torneiofut.team.remote
 
 import android.util.Log
-import com.brizola.torneiofut.team.data.Team
+import com.brizola.torneiofut.team.domain.data.Team
 import com.brizola.torneiofut.webservice.RetrofitNetworkClient
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

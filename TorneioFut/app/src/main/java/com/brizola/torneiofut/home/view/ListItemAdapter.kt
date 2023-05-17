@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.brizola.torneiofut.databinding.ListItemBinding
-import com.brizola.torneiofut.login.data.local.Match
+import com.brizola.torneiofut.match.domain.data.local.Match
 
 class ListItemAdapter : RecyclerView.Adapter<ListItemViewHolder>() {
 
