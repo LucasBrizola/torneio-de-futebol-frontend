@@ -7,7 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
 import com.brizola.torneiofut.databinding.ActivityHomeBinding
-import com.brizola.torneiofut.team.view.NewTeamActivity
+import com.brizola.torneiofut.login.view.LoginActivity
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding
@@ -20,7 +20,7 @@ class HomeActivity : AppCompatActivity() {
         configTab()
 
         binding.btnNewTeam.setOnClickListener {
-            startActivity(Intent(this@HomeActivity, NewTeamActivity::class.java))
+            startActivity(Intent(this@HomeActivity, LoginActivity::class.java))
         }
     }
 

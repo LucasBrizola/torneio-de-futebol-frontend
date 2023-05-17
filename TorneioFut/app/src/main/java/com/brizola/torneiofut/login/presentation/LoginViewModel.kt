@@ -19,7 +19,6 @@ class LoginViewModel : ViewModel() {
         viewModelScope.launch {
             val loginSuccess = usecase.login(name, password)
             if (loginSuccess == true) {
-
                 state.value = ViewState.ShowSuccess
             } else
                 state.value = ViewState.ShowError

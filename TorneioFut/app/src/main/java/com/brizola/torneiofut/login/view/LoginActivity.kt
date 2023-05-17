@@ -6,9 +6,9 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
 import com.brizola.torneiofut.databinding.ActivityLoginBinding
-import com.brizola.torneiofut.home.view.HomeActivity
 import com.brizola.torneiofut.login.presentation.LoginViewModel
 import com.brizola.torneiofut.login.presentation.ViewState
+import com.brizola.torneiofut.team.view.NewTeamActivity
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
@@ -39,7 +39,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun ShowSucess() {
-        startActivity(Intent(this@LoginActivity, HomeActivity::class.java))
+        startActivity(Intent(this@LoginActivity, NewTeamActivity::class.java))
     }
 
     private fun showError() {
