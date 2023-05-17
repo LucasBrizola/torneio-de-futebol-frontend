@@ -1,12 +1,13 @@
 package com.brizola.torneiofut.home.view
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
-import com.brizola.torneiofut.R
 import com.brizola.torneiofut.databinding.ActivityHomeBinding
+import com.brizola.torneiofut.team.view.NewTeamActivity
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding
@@ -17,6 +18,10 @@ class HomeActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         configTab()
+
+        binding.btnNewTeam.setOnClickListener {
+            startActivity(Intent(this@HomeActivity, NewTeamActivity::class.java))
+        }
     }
 
     private fun configTab() {
@@ -26,7 +31,7 @@ class HomeActivity : AppCompatActivity() {
 
     class ViewPagerAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
         override fun getCount(): Int {
-            return 2
+            return 1
         }
 
         override fun getItem(position: Int): Fragment {
