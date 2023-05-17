@@ -14,12 +14,12 @@
             android:layout_width="match_parent"
             android:layout_height="100dp">
             <LinearLayout
-                android:id="@+id/ll_times"
+                android:id="@+id/ll_teams"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="10dp"
-                android:layout_marginTop="22dp"
+                android:layout_marginTop="20dp"
                 android:gravity="center"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -54,11 +54,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal|center_vertical"
-                android:layout_marginEnd="32dp"
+                android:layout_marginStart="16dp"
                 app:layout_constraintStart_toEndOf="@id/tv_versus"
-                app:layout_constraintEnd_toEndOf="parent"
                 tools:text="time2"/>
-
             </LinearLayout>
 
             <TextView
@@ -69,7 +67,7 @@
                 android:textSize="16sp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@id/ll_times"
+                app:layout_constraintStart_toEndOf="@id/ll_teams"
                 app:layout_constraintEnd_toEndOf="parent"
                 tools:text="16:15"/>
 
@@ -82,7 +80,7 @@
                 android:gravity="center_horizontal|center_vertical"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/ll_times"
+                app:layout_constraintTop_toBottomOf="@id/ll_teams"
                 app:layout_constraintBottom_toBottomOf="parent"
                 tools:text="1x0"/>
 
