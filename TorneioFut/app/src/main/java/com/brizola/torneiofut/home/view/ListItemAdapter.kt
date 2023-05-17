@@ -25,6 +25,7 @@ class ListItemAdapter : RecyclerView.Adapter<ListItemViewHolder>() {
 
     fun setItems(items: List<Match>) {
         list.addAll(items)
+        notifyDataSetChanged()
     }
 
 }

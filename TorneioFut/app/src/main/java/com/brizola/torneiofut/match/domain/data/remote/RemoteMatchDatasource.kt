@@ -14,7 +14,7 @@ class RemoteMatchDatasource {
             val match = service.getAllCharacters()
             if (match.isSuccessful) {
                 Log.e("MatchDataSource", "body from response: " + "${match.body()}")
-                return match.body()!!
+                return match.body().orEmpty()
             } else {
                 return listOf()
             }

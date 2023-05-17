@@ -35,6 +35,7 @@ class MatchesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.list.adapter = adapter
+        viewModel.populateRecyclerView()
         viewModel.viewState.observe(viewLifecycleOwner) { state ->
             when (state) {
                 is ViewState.ShowMatchList -> addItems(state.matchList)

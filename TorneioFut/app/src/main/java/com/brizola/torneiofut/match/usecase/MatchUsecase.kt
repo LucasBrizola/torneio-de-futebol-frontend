@@ -11,8 +11,6 @@ class MatchUsecase {
     }
 
     suspend fun listAll(): List<Match>{
-        val listMatches = remoteMatchDatasource.getListAll()
-        Log.e("Match", "list Matches: " + "${listMatches}")
-        return listMatches
+        return remoteMatchDatasource.getListAll()
     }
 }
